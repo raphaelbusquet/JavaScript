@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="PT-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Entendendo o DOM (Document Object Model)</title>
+</head>
+<body>
+    <h1>Usando o DOM</h1>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Reiciendis expedita velit quasi natus modi aperiam sit corporis obcaecati dolores quae veritatis nam, temporibus <strong>explicabo</strong> neque, excepturi quia! Beatae, quisquam at.</p>
+
+    <p>Aqui é o segundo parágrafo</p>
+
+    <p id="msg">Aqui é o <strong>terceiro</strong> parágrafo</p>
+
+    <script>
+        var p1 = window.document.getElementsByTagName('p')[1] //Seleção por TagName
+        window.document.write(p1.innerText)
+    </script>
+    <br><br>
+    <script>
+        var msg = document.getElementById("msg")
+        document.write(msg.innerHTML) // Seleção por Id
+    </script>
+
+    <script>
+        var msg1 = document.querySelector('p#msg')
+        window.alert(msg1.innerText) /* Por querySelector (Pode ser # se for Id ou . se for classe)*/
+    </script>
+</body>
+</html>

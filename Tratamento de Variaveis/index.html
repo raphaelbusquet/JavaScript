@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="PT-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tratamento de variáveis</title>
+</head>
+<body>
+    <h1>Vamos começar a tratar variáveis</h1>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sunt reiciendis corporis ducimus cumque sapiente! Dolores, neque officiis consectetur eveniet enim voluptatum culpa soluta sint consequatur ratione beatae aut sit possimus!</p>
+
+    <script>
+        var nome = prompt('Qual o seu nome?')
+        alert(`O seu nome é ${nome}`) /* Usando crase para colocar variáveis no meio da string*/
+        alert(`Seu nome tem ${nome.length} letras.`) // Calcular tamanho de strings
+
+        document.write(`Seu nome com letras maiúsculas é: ${nome.toLocaleUpperCase()}.`) // Escreve algo na tela depois dos comandos de interação.
+
+        var n1 = Number(prompt('Qual número 1?'))
+        var n2 = Number(prompt('Qual o número 2?')) /* Number, para transformar uma string num número (Pode ser usado o Number isolado, ou com parseInt / parseFloat)*/
+        var res = n1 + n2
+        alert(`O resultado de ${n1} + ${n2} é ${res.toString()} ou ${String(res)}!`) /* .toString para transformar número em string, pode ser usado também o String(n) */   //Usando a Template strings
+
+        res.toFixed(2).replace('.', ',') // Reduz a 2 casas decimais. Replace, comando para fazer o replace de itens isolados.
+        alert(res)
+        
+        res.toLocaleString('PT-br', {style: 'currency', currency: 'BRL'}) // Para mostrar em moedas. 
+
+        alert(res)   
+    </script>
+</body>
+</html>

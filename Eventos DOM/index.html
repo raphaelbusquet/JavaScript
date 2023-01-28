@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="PT=br">
+<head> 
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Eventos DOM</title>
+    <style>
+        div#area{
+            font: normal 30pt arial;
+            background: green;
+            color: aliceblue;
+            width: 500px;
+            height: 500px;
+            line-height: 500px;
+            text-align: center;
+        }
+
+        div#area2 {
+            font: normal 30pt arial;
+            background: rgb(58, 60, 166);
+            color: rgb(255, 255, 255);
+            width: 500px;
+            height: 500px;
+            line-height: 500px;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <div id="area" onclick="clicar()" onmouseenter="entrar()" onmouseleave="sair()"> <!--Pode Criar eventos assim ou... com addEventListener()-->
+        Interaja...
+    </div>
+
+    <div id="area2">Segundo campo...</div>
+    <script>
+        var a = document.querySelector('div#area')
+        var a2 = document.querySelector('div#area2')
+        a2.addEventListener('click', clicar2)
+        a2.addEventListener('mouseenter', entrar2)
+        a2.addEventListener('mouseout', sair2)
+
+        function clicar(){
+            
+            a.innerText = 'Não era para clicar.'
+        }
+
+        function entrar(){
+
+        
+            a.innerText = 'Bem vinda Cecília!'
+            a.style.background = 'pink'
+        }
+
+        function sair(){
+            a.innerText = 'Volte para o quadrado.'
+            a.style.background = 'green'
+        }
+
+        function clicar2(){
+            a2.innerText = 'Não era para clicar.'
+        }
+
+        function entrar2(){
+            a2.innerText = 'Bem vinda Cecília!'
+            a2.style.background = 'pink'
+        }
+
+        function sair2(){
+            a2.innerText = 'Volte para o quadrado.'
+            a2.style.background = 'green'
+        }   // ! eu fiz com o AddEventListener() e outro eu fiz dentro da Tag. 
+    </script>
+</body>
+</html>
